@@ -136,7 +136,8 @@ tape( 'when invoked with a `-V` flag, the command-line interface prints the vers
 		if ( error ) {
 			t.fail( error.message );
 		} else {
-			t.strictEqual( stdout.toString(), '', 'does not print to `stdout`' );
+			const t = 'does not print to `stdout`';
+			t.strictEqual( stdout.toString(), '',  t);
 			t.strictEqual( stderr.toString(), PKG_VERSION+'\n', 'expected value' );
 		}
 		t.end();
